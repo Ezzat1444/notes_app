@@ -47,7 +47,8 @@ class NoteItem extends StatelessWidget {
               'May21 ,2022',
               style: TextStyle(color: Colors.black.withValues(alpha: 0.6)),
             ),
-          )
+          ),
+          
         ],
       ),
     );
