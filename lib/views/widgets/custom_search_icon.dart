@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomSearchIcon extends StatelessWidget {
@@ -11,12 +10,13 @@ class CustomSearchIcon extends StatelessWidget {
       width: 46,
       decoration: BoxDecoration(
         color: Colors.white.withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(16),  
+        borderRadius: BorderRadius.circular(16),
       ),
       child: IconButton(
-        onPressed: (){},
-         icon: Icon(Icons.search),
-         iconSize: 28,),
+        onPressed: () {},
+        icon: Icon(Icons.search),
+        iconSize: 28,
+      ),
     );
   }
 }

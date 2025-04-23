@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -48,7 +47,6 @@ class NoteItem extends StatelessWidget {
               style: TextStyle(color: Colors.black.withValues(alpha: 0.6)),
             ),
           ),
-          
         ],
       ),
     );
