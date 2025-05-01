@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onTap});
+  const CustomButton({super.key, this.onTap, this.isloading = false});
   final void Function()? onTap;
+  final bool isloading;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,10 +20,18 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: Center(
-            child: Text(
-              'Add',
-              style: TextStyle(color: Colors.black, fontSize: 22),
-            ),
+            child: isloading
+                ? const SizedBox(
+                    height: 25,
+                    width: 25,
+                    child: CircularProgressIndicator(
+                      color: Colors.black,
+                    ),
+                  )
+                : const Text(
+                    'Add',
+                    style: TextStyle(color: Colors.black, fontSize: 22),
+                  ),
           ),
         ),
       ),
