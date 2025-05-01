@@ -52,8 +52,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
-              var CurrentDate = DateTime.now();
-              var FormattedCurrentDate = DateFormat.yMMMMd().format(CurrentDate);
+              var currentDate = DateTime.now();
+              var formattedCurrentDate = DateFormat.yMMMMd().format(currentDate);
               return CustomButton(
                 isloading: state is AddNoteLoading ? true : false,
                 onTap: () {
@@ -63,7 +63,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     NoteModel noteModel = NoteModel(
                         title: title!,
                         subtitle: subtitle!,
-                        date: FormattedCurrentDate,
+                        date: formattedCurrentDate,
                         color: Colors.green.value);
 
                     BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
